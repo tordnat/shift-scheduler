@@ -3,7 +3,7 @@
 ## Overview
 This document outlines the development phases of the scheduling system project, focusing on a user-friendly, hybrid system compatible with a Django web application backend.
 
-<img src="docs/development.png" alt="image" width="auto" height="300"> <img src="docs/developent_schedule.png" alt="image" width="auto" height="300">
+<img src="docs/development.png" alt="image" width="auto" height="300"> <img src="docs/gantt.png" alt="image" width="auto" height="300">
 
 ## Phases of Development
 
