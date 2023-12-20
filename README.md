@@ -1,7 +1,7 @@
 # Project Development Plan
 
 ## Overview
-This document outlines the development phases of the scheduling system project, focusing on a user-friendly, hybrid system compatible with a Django web application backend.
+This document outlines the development phases of the scheduling system project, focusing on a user-friendly, hybrid system compatible with a Django web application backend. The code is documented using Doxygen (see docs/). 
 
 <img src="docs/development.png" alt="image" width="auto" height="300"> <img src="docs/gantt.png" alt="image" width="auto" height="300">
 
