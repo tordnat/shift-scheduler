@@ -8,7 +8,7 @@ This document outlines the development phases of the scheduling system project, 
 ## Phases of Development
 
 ### Phase 1: Planning and Research
-**Duration:** 4 weeks
+**Duration:** 5 weeks
 
 **Objectives:**
 - Understand the scheduling problem in depth.
@@ -26,7 +26,7 @@ This document outlines the development phases of the scheduling system project, 
 ---
 
 ### Phase 2: Prototype Development
-**Duration:** 8 weeks
+**Duration:** 12 weeks
 
 **Objectives:**
 - Develop a basic, functional prototype.
