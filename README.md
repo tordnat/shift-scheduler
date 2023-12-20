@@ -1,28 +1,108 @@
-# Tips fra Magnus Lie Hetland
+# Project Development Plan
 
+## Overview
+This document outlines the development phases of the scheduling system project, focusing on a user-friendly, hybrid system compatible with a Django web application backend.
 
-Hei, hei!
+## Phases of Development
 
-Selv om du har planer om å bruke en lokal søkealgoritme, så vil jeg anbefale deg å vurdere et alternativ først: Å begynne med å sette deg inn i lineærprogrammering, inkludert heltallsutvidelsen av dette, gjerne kalt «mixed-integer (linear) programming». Det finnes pakker for dette til de fleste programmeringsspråk, der man kan bruke ulike back-ends/«solvers», inkludert kommersielle (svært gode) som f.eks. Gurobi (https://www.gurobi.com/), som man lett kan få akademisk lisens på (men sjekk om lisensen dekker den typen bruk du ser for deg). Men det finnes også mange svært gode (om enn ikke like gode) open-source-solvere.
+### Phase 1: Planning and Research
+**Duration:** 4 weeks
 
-Om du bruker Python, er vel Pyomo (http://www.pyomo.org/) kanskje en grei front-end. PuLP (https://github.com/coin-or/pulp) er et annet alternativ.
+**Objectives:**
+- Understand the scheduling problem in depth.
+- Research existing solutions, frameworks, and methodologies.
 
-Selv bruker jeg Julia (https://julialang.org/) til sånt som dette, og da pakken JuMP (https://jump.dev/). En myk start der finner du f.eks. i tutorial-delen av dokumentasjonen:
+**Tasks:**
+- **Explore the Problem**: Define the requirements and constraints of the scheduling system.
+- **Literature Review**: Conduct a review of similar problems and solutions.
+- **Technology Selection**: Choose appropriate technologies considering integration with Django.
+    - **Programming Language**: Python
+    - **Solver Options**: Pyomo, PuLP for linear/mixed-integer programming; explore Julia's JuMP for more complex formulations.
+    - **Web Framework**: Django for backend integration.
+- **Initial Design**: High-level design of the system, considering a hybrid model for both automated and manual scheduling.
 
-https://jump.dev/JuMP.jl/stable/tutorials/linear/introduction/
+---
 
-Det er ikke garantert at du kan få kodet inn alt du ønsker i et mixed-integer-program (MIP), men det er gode sjanser for at det er mulig. Det er også mulig å få til ulike former for rettferdighet, f.eks., som ikke nødvendigvis ser lineært ut ved første øyekast. (Jeg har implementert en del slikt i https://github.com/mlhetland/Allocations.jl, f.eks.) 
+### Phase 2: Prototype Development
+**Duration:** 8 weeks
 
-En del triks for å få kodet inn ting:
+**Objectives:**
+- Develop a basic, functional prototype.
+- Establish core functionalities.
 
-https://folk.idi.ntnu.no/mlh/algkon/lp_tricks.pdf
+**Tasks:**
+- **Excel Integration**: Implement functionality to read Excel files (using `pandas`).
+- **Solver Implementation**: Basic implementation of scheduling algorithms using chosen solvers.
+- **GUI Development**: Develop a simple and intuitive web interface (considering Django-compatible JavaScript frameworks like React or Vue.js for front-end).
+- **Initial Testing**: Basic functionality and usability testing.
 
-https://folk.idi.ntnu.no/mlh/algkon/ip_tricks.pdf
+---
 
-Om du heller vil (eller finner ut at du må) bruke et lokalt søk, så vet jeg ikke nødvendigvis hva som er best/cutting edge der, men å bare kjøre på med en helt enkel simulated annealing vil ofte kunne fungere rimelig bra, og vil jo være et enkelt sted å begynne.
+### Phase 3: Exam Break
+**Duration:** Adjusted as per academic schedule
 
-Det finnes vel også pakker med ulike former for lokalt søk som «back-ends», så du kan prøve ulike varianter, selv om du selv kun trenger å implementere en fitness-funksjon og en mutasjonsoperator, f.eks. Jeg har ikke noen anbefalinger i hodet der, for øyeblikket, men det bør være mulig å finne, skulle jeg tro.
+**Objectives:**
+- Focus on academic commitments, with minimal engagement in the project.
 
-Mvh,
+---
 
-Magnus Lie Hetland
+### Phase 4: Iterative Development and Testing
+**Duration:** 16 weeks
+
+**Objectives:**
+- Enhance, refine, and optimize the system.
+- Focus on robustness, efficiency, and user experience.
+
+**Tasks:**
+- **Feature Expansion**: Integrate advanced features and constraints.
+- **Optimization**: Enhance the efficiency of the scheduling algorithm.
+- **GUI Improvement**: Improve the web interface for better user interaction (using Django with JavaScript frameworks).
+- **Comprehensive Testing**: Conduct extensive testing, including user acceptance testing.
+
+---
+
+### Phase 5: User Testing and Feedback
+**Duration:** 6 weeks
+
+**Objectives:**
+- Gather and incorporate user feedback.
+- Refine the system based on real-world usage.
+
+**Tasks:**
+- **User Testing**: Deploy the system for controlled user testing.
+- **Feedback Collection**: Gather user feedback, focusing on usability and functionality.
+- **Iterative Improvements**: Refine the system based on feedback, ensuring simplicity and effectiveness.
+
+---
+
+### Phase 6: Final Review and Deployment
+**Duration:** 4 weeks
+
+**Objectives:**
+- Finalize the system for operational deployment.
+- Ensure the system is user-friendly and integrates seamlessly with the existing infrastructure.
+
+**Tasks:**
+- **Final Refinements**: Implement the final set of refinements.
+- **Documentation**: Complete comprehensive documentation for users and maintainers.
+- **Deployment Preparation**: Prepare the system for full deployment in the Django-based web environment.
+- **Final Review**: Review the system with stakeholders for final approval.
+
+---
+
+### Phase 7: Maintenance and Improvement
+**Duration:** Ongoing
+
+**Objectives:**
+- Maintain the system's functionality and relevance.
+- Continuously improve based on user feedback and technological advancements.
+
+**Tasks:**
+- **Regular Updates**: Implement updates to maintain compatibility with Django and other technologies.
+- **Feedback Monitoring**: Monitor and respond to user feedback for ongoing improvements.
+- **Adaptation to Changes**: Adapt the system to evolving requirements and technological changes.
+
+---
+
+This plan is designed to ensure a systematic, efficient approach to developing a user-friendly, hybrid scheduling system, integrated with a Django-based web application.
+
