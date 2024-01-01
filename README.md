@@ -1,18 +1,31 @@
 # Project Development Plan
 
 ## Overview
-This document outlines the development phases of the scheduling system project, focusing on a user-friendly, hybrid system compatible with a Django web application backend.
+This document outlines the development phases of the scheduling system project, focusing on a user-friendly, hybrid system compatible with a Django web application backend. The code is documented using Doxygen (see docs/). 
 
 <img src="docs/development.png" alt="image" width="auto" height="300"> <img src="docs/gantt.png" alt="image" width="auto" height="300">
 
 ## Phases of Development
 
 ### Phase 1: Planning and Research
-**Duration:** 4 weeks
+**Duration:** 5 weeks
 
 **Objectives:**
 - Understand the scheduling problem in depth.
 - Research existing solutions, frameworks, and methodologies.
+- Focus on the solution, not the novelty of it. 
+  
+**Questions to ponder:**
+- How do I represent the constraints of a day/timeslot/place/week?
+- How do I formulate the constraints of an individual?
+- What if I want to change the plan for a week?
+- How can I make it easy to change the plan for a week?
+- How do the supervisors differ in how they like to plan different weeks?
+- How can I combine the preference of all the different employees?
+- What if the supervisor wants to fine-tune or change a suggestion?
+- How can I make it both hybrid and robust to use?
+- How can I make it easy to both couple and decouple from existing systems?
+
 
 **Tasks:**
 - **Explore the Problem**: Define the requirements and constraints of the scheduling system.
@@ -26,7 +39,7 @@ This document outlines the development phases of the scheduling system project, 
 ---
 
 ### Phase 2: Prototype Development
-**Duration:** 8 weeks
+**Duration:** 12 weeks
 
 **Objectives:**
 - Develop a basic, functional prototype.
