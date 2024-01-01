@@ -1,4 +1,5 @@
 .DS_Store
 test_data/*
 .venv
+.vscode/
 __pycache__/

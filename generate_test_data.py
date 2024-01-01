@@ -1,3 +1,13 @@
+"""
+Command Line Argument Validator and Schedule Data Saver
+
+This script validates command line arguments for generating test schedule data and saves the generated schedules to Excel files.
+It handles validation of input data types and checks for file and directory existence.
+
+Dependencies: os, sys, custom modules (excel_schedule_parser)
+Author: Tord Natlandsmyr
+Version: 1.0
+"""
 import sys
 import os
 from excel_schedule_parser import *
@@ -6,9 +16,11 @@ def validate_arguments(args):
     """
     Validates the command line arguments.
 
-    @param args List of command line arguments.
-    @return Tuple containing the number of test data, the file path of the schedule, and the path to store test data.
-    @exception SystemExit If any argument validation fails.
+    :param args: List of command line arguments.
+    :type args: list
+    :return: Tuple containing the number of test data, the file path of the schedule, and the path to store test data.
+    :rtype: tuple
+    :raises SystemExit: If any argument validation fails.
     """
     if len(args) != 4:
         print("Usage: generate_test_data.py <number_of_test_schedule_preferences> <file_path_of_schedule> <path_to_store_test_data>")
@@ -36,10 +48,13 @@ def save_test_schedules(directory_path, file_name, test_schedule_array):
     """
     Saves each employee's shift preferences to an Excel file.
 
-    @param directory_path The directory path where the Excel files will be saved.
-    @param file_name The base name for the output files.
-    @param test_schedule_array Array of DataFrames, each containing an employee's shift preferences.
-    @exception Exception If an error occurs during file saving.
+    :param directory_path: The directory path where the Excel files will be saved.
+    :param file_name: The base name for the output files.
+    :param test_schedule_array: Array of DataFrames, each containing an employee's shift preferences.
+    :type directory_path: str
+    :type file_name: str
+    :type test_schedule_array: list
+    :raises Exception: If an error occurs during file saving.
     """
     try:
         for i, schedule in enumerate(test_schedule_array):
@@ -50,6 +65,9 @@ def save_test_schedules(directory_path, file_name, test_schedule_array):
         sys.exit(1)
 
 def main():
+    """
+    Main function to generate and save test schedule preferences.
+    """
     num_test_data, file_path, directory_path = validate_arguments(sys.argv)
     
     test_data_filename = os.path.splitext(os.path.basename(file_path))[0]
