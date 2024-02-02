@@ -1,9 +1,10 @@
-# Project Development Plan
+# Orakel Scheduling WORK IN PROGRESS
+
+Orakel nurse scheduling algorithm used for employee scheduling at Orakeltjenesten NTNU IT. 
 
 ## Overview
-This document outlines the development phases of the scheduling system project, focusing on a user-friendly, hybrid system compatible with a Django web application backend. The code is documented using Sphinx (see docs/). 
 
-<img src="docs/development.png" alt="image" width="auto" height="300"> <img src="docs/gantt.png" alt="image" width="auto" height="300">
+This project uses mixed integer linear programming to optimize shift scheduling at Orakeltjenesten.
 
 ## Phases of Development
 
